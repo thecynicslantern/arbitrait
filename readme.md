@@ -5,6 +5,10 @@ Loosely based on [traits in Rust](https://doc.rust-lang.org/book/second-edition/
 
 Everyone knows we shouldn't modify `Array.prototype`. But what if we really want to have, say, `array.first()`? We can get something close, compartmentalised neatly and harmlessly in a trait!
 
+```
+npm install arbitrait
+```
+
 ```js
 const trait = require("arbitrait");
 
