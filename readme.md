@@ -5,7 +5,7 @@ Loosely based on [traits in Rust](https://doc.rust-lang.org/book/second-edition/
 
 Everyone knows we shouldn't modify `Array.prototype`. But what if we really want to have, say, `array.first()`? We can get something close, compartmentalised neatly and harmlessly in a trait!
 
-```
+```js
 const trait = require("arbitrait");
 
 // define a trait
@@ -32,7 +32,7 @@ Serial.implement([Array, HTMLCollection], {
 
 Then to use it we need to wrap our Array/HTMLCollection with the trait to provide the context:
 
-```
+```js
 console.log(
     Serial(document.anchors)
         .first(a => /^https/.test(a.href))
@@ -47,7 +47,7 @@ Common interface, tailored implementations
 
 So we have some constructors...
 -------------------------------
-```
+```js
 const Person = function (name, occupation) { this.name = name; this.occupation = occupation };
 const Dog = function (name) { this.name = name; };
 const Sheep = function (name, fluffinessFactor) { this.name = name; this.fluffinessFactor = fluffinessFactor };
@@ -57,7 +57,7 @@ const Sheep = function (name, fluffinessFactor) { this.name = name; this.fluffin
 Let's make a trait
 ------------------
 
-```
+```js
 const Talk = trait({
     happy: 0,
     sad: 0
@@ -66,7 +66,7 @@ const Talk = trait({
 
 And implement it for our constructors
 -------------------------------------
-```
+```js
 Talk.implement(Person, {
     happy: function () { return "Hooray! I love being a " + this.occupation; },
     sad: function () { return "Oh no!"; }
@@ -85,7 +85,7 @@ Talk.implement(Sheep, {
 
 Now let's make some objects
 ---------------------------
-```
+```js
 var dude = new Person("Billy", "programmer");
 var mutt = new Dog("Fido");
 var ewe = new Sheep("Dolly", 100000);
@@ -93,7 +93,7 @@ var ewe = new Sheep("Dolly", 100000);
 
 And make them speak!
 --------------------
-```
+```js
 console.log("Person, happy:", Talk(dude).happy());
 console.log("Person, sad:", Talk(dude).sad());
 console.log("Dog, happy:", Talk(mutt).happy());
