@@ -1,0 +1,16 @@
+{
+  "name": "arbitrait",
+  "version": "0.1.0",
+  "description": "Traits for JavaScript",
+  "main": "arbitrait.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "traits"
+  ],
+  "author": "Andy Souter",
+  "license": "ISC"
+}
