@@ -46,6 +46,8 @@ console.log(
 
 That is, call `first()` on `document.anchors`, in the context of it being ('*as*') a `Serial`.
 
+See the example/ directory for a more practical use of traits.
+
 Common interface, tailored implementations
 ==========================================
 
