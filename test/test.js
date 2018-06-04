@@ -24,6 +24,7 @@ expectError("already implemented for Console", () => Write.implement(console.con
 expectError("`mogwaiRocks` not in trait", () => Write.implement(Array, { mogwaiRocks: function () { }, }));
 expectError("missing `write` impl", () => Write.implement(Array, {}));
 expectError("incorrect signature", () => Write.implement(Array, { write: function (a, b) { }}));
+expectError("not implemented for Object", () => Write({}).write("Oh no!"));
 
 // impl copying
 function Logger() {
