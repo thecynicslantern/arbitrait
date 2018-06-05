@@ -1,6 +1,6 @@
 {
   "name": "arbitrait",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Traits for JavaScript",
   "main": "arbitrait.js",
   "scripts": {
